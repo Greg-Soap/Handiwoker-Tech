@@ -1,0 +1,27 @@
+@import "./breakpoints";
+@import "./theme.scss";
+* {
+  padding: 0;
+  margin: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.theme {
+  @include themify($themes) {
+    background-color: themed("bg");
+    color: themed("text");
+  }
+}
+.bg {
+  @include themify($themes) {
+    background-color: themed("bgSecondary");
+    color: themed("textSec");
+  }
+}
+.skill {
+  @include themify($themes) {
+    border: 3px solid themed("border");
+  }
+}
