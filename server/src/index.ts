@@ -137,6 +137,6 @@ app.get("/api/cart/:productId", async (req: Request, res: Response) => {
     res.status(200).json(product);
   } catch (error) {
     console.log(error);
-    res.status(500).send("Server Error");
+    res.status(500).send("Apologies Server Error");
   }
 });
