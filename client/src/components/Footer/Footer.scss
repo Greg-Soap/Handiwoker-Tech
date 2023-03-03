@@ -1,0 +1,12 @@
+@import "../../styles/breakpoints";
+.foot {
+  background-color: #1e2842;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  p {
+    text-align: center;
+    color: white;
+    font-weight: 600;
+  }
+}
