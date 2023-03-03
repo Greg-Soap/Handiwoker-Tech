@@ -24,23 +24,14 @@ const ProductCard: React.FC<TProps> = ({ product }) => {
   const price = FormatNaira(product.price);
 
   return (
-    <article
-      key={product._id}
-      style={{
-        border: "1px solid black",
-        padding: "16px",
-        margin: "16px",
-      }}
-    >
-      <h2>{product.name}</h2>
-      <p>{product.desc}</p>
-      <p>{price}</p>
-      <img
-        src={product.imageUrl}
-        alt={product.name}
-        style={{ width: "150px", height: "150px" }}
-      />
-      <button onClick={handleAddToCart}>Add to cart</button>
+    <article key={product._id} className="product">
+      <img src={product.imageUrl} alt={product.name} />
+      <h2 className="name">{product.name}</h2>
+      <p className="desc">{product.desc}</p>
+      <p className="price">{price}</p>
+      <button className="add" onClick={handleAddToCart}>
+        Add to cart
+      </button>
     </article>
   );
 };

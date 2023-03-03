@@ -1,0 +1,47 @@
+@import "../../styles/breakpoints";
+@import "../../styles/theme.scss";
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 1px 0 rgb(0 0 0 / 10%);
+  .brand {
+    color: black;
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    letter-spacing: 1px;
+  }
+  .cart {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-right: 2rem;
+    img {
+      width: 30px;
+    }
+    span {
+      background-color: blue;
+      color: white;
+      font-weight: bold;
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      font-size: 14px;
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

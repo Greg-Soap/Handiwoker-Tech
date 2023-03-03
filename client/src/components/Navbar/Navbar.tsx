@@ -6,10 +6,16 @@ const Navbar: React.FC = () => {
   const { cartCount } = useContext(Context);
 
   return (
-    <nav>
-      <Link to="/">Handiwork</Link>
-      <Link to="/cart">
-        Cart <span>{cartCount}</span>
+    <nav className="navbar">
+      <Link className="brand" to="/">
+        Handiwoker
+      </Link>
+      <Link className="cart" to="/cart">
+        <img
+          src="https://img.icons8.com/material-rounded/256/shopping-cart.png"
+          alt=""
+        />
+        <span>{cartCount}</span>
       </Link>
     </nav>
   );

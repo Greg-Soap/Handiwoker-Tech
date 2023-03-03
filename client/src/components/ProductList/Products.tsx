@@ -15,11 +15,11 @@ const Products: React.FC = () => {
   }, [baseUrl]);
 
   return (
-    <>
+    <section className="products">
       {products.map((product) => (
         <ProductCard product={product} />
       ))}
-    </>
+    </section>
   );
 };
 export default Products;

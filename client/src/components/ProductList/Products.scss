@@ -1,0 +1,10 @@
+@import "../../styles/breakpoints";
+@import "../../styles/theme.scss";
+.products {
+  display: flex;
+  padding: 2rem;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 10vh;
+}
