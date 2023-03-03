@@ -15,7 +15,7 @@ const Navbar: React.FC = () => {
           src="https://img.icons8.com/material-rounded/256/shopping-cart.png"
           alt=""
         />
-        <span>{cartCount}</span>
+        {cartCount === "" ? null : <span>{cartCount}</span>}
       </Link>
     </nav>
   );

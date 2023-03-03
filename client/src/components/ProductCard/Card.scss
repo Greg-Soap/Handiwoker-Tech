@@ -1,5 +1,4 @@
 @import "../../styles/breakpoints";
-@import "../../styles/theme.scss";
 .product {
   display: flex;
   justify-content: space-between;
@@ -10,6 +9,9 @@
   background-color: rgb(255, 255, 255);
   border-radius: 5px;
   box-shadow: rgba(0, 30, 43, 0.3) 0px 4px 10px -4px;
+  @include tablet {
+    width: 38%;
+  }
   img {
     border-radius: 5px 5px 0px 0px;
   }
@@ -17,29 +19,43 @@
     font-weight: 400;
     font-size: 1.5rem;
     letter-spacing: 1px;
+    @include tablet {
+      font-size: 1rem;
+    }
   }
   .desc {
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     font-weight: 300;
     font-size: 0.9rem;
     margin: 0.2rem;
+    @include tablet {
+      font-size: 0.7rem;
+    }
   }
   .price {
     font-weight: 400;
     font-size: 1.2rem;
     letter-spacing: 1px;
+    @include tablet {
+      font-size: 1rem;
+    }
   }
   .add {
     letter-spacing: 2px;
     background-color: #1e2842;
     color: white;
     text-decoration: none;
-    border-radius: 0px 0px 5px 5px;
+    border-radius: 5px;
     cursor: pointer;
     text-transform: uppercase;
     font-size: 0.9rem;
     font-weight: 500;
     padding: 1rem 1.5rem;
+    @include tablet {
+      padding: 0.5rem;
+      font-size: 0.7rem;
+      letter-spacing: 1px;
+    }
     &:hover {
       background-color: #1e2842;
     }

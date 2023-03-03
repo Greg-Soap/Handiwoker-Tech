@@ -24,43 +24,42 @@ const Cart: React.FC = () => {
     }
   };
   return (
-    <div>
-      <h2>Cart</h2>
-      {cartItems.length === 0 && <p>Your cart is empty.</p>}
-      {cartItems.length > 0
-        ? cartItems.map((item) => {
-            const ItemPrice = item.productId.price * item.quantity;
-            const formattedPrice = FormatNaira(ItemPrice);
-            return (
-              <div
-                key={item.productId._id}
-                style={{ display: "flex", justifyContent: "space-between" }}
-              >
-                <img
-                  src={item.productId.imageUrl}
-                  alt={item.productId.name}
-                  style={{ width: "150px", height: "150px" }}
-                />
-                <p>
-                  {item.productId.name} x {item.quantity}
-                </p>
-                <p>{formattedPrice}</p>
-                <button
-                  onClick={() =>
-                    handleRemoveFromCart(
-                      item.productId._id,
-                      item.productId.name
-                    )
-                  }
-                >
-                  Remove
-                </button>
-              </div>
-            );
-          })
-        : null}
-      {cartItems.length > 0 && <p>Total: {cartTotal}</p>}
-    </div>
+    <section className="Cart">
+      <h2 className="title">Cart({cartItems.length})</h2>
+      {cartItems.length === 0 && <p className="empty">Your cart is empty.</p>}
+      <div className="wrapper">
+        {cartItems.length > 0
+          ? cartItems.map((item) => {
+              const ItemPrice = item.productId.price * item.quantity;
+              const formattedPrice = FormatNaira(ItemPrice);
+              return (
+                <div key={item.productId._id} className="item">
+                  <img
+                    src={item.productId.imageUrl}
+                    alt={item.productId.name}
+                  />
+                  <p className="text">
+                    {item.productId.name} x {item.quantity}
+                  </p>
+                  <p className="price">{formattedPrice}</p>
+                  <button
+                    className="remove"
+                    onClick={() =>
+                      handleRemoveFromCart(
+                        item.productId._id,
+                        item.productId.name
+                      )
+                    }
+                  >
+                    Remove
+                  </button>
+                </div>
+              );
+            })
+          : null}
+        {cartItems.length > 0 && <p className="total">Total: {cartTotal}</p>}
+      </div>
+    </section>
   );
 };
 export default Cart;
